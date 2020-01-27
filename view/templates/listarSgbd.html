@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/staticsgbd.css">
+    <title>Lista SGBD</title>
+</head>
+<body>
+    <div class = 'conteudo'>
+        <table>
+        <a></a>
+            <p id="fonte">Lista SGBD</p>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descricao</th>
+                    <th>Versao</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+        <tbody>
+            {% for p in lista %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nome }}</td>
+                <td>{{ p.descricao }}</td>
+                <td>{{ p.versao }}</td>
+                <td>
+                    <a href="/excluirsgbd?id={{ p.id }}" class="excluirsgbd">Excluir</a>
+                </td>
+                <td>
+                    <a href="/cadastroSGBD?id={{ p.id }}" class="alterarsgbd">Alterar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</body>
+</html>

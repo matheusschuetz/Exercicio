@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro SGBD</title>
+</head>
+<body>
+    <form action="/salvarSGBD" method="GET">
+        <input type="hidden" name="id" id="id" value="{{sgbd.id}}"> <br/>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" value="{{sgbd.nome}}">
+        <br>
+        <label for="descricao">Descrição: </label>
+        <input type="text" name="descricao" id="descricao" value="{{sgbd.descricao}}">
+        <br>
+        <label for="versao">Versao: </label>
+        <input type="text" name="versao" id="versao" value="{{sgbd.id}}">
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
